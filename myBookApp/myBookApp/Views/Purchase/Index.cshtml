@@ -1,0 +1,48 @@
+﻿@model IEnumerable<myBookApp.Models.Purchase>
+
+
+@{
+    ViewData["Title"] = "Purchase Page";
+}
+
+
+
+
+<div>
+
+    <table style="width:100%" class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Client</th>
+                <th scope="col">Book</th>
+                <th scope="col">Date</th>
+                <th scope="col"> </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ClientId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BookId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @*<a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
+                        
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+</div>

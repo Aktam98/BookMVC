@@ -1,0 +1,46 @@
+﻿@model IEnumerable<myBookApp.Models.Book>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@Html.ActionLink("Create New","Create")
+
+
+<div>
+ 
+        <table style="width:100%" class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                    <th scope="col"> </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Author)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @*<a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
+                            <a class="btn btn-outline-primary btn-group-sm" asp-controller="Client" asp-action="Create" asp-route-id="@item.Id">Sotib olish</a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+            </table>
+
+        
+</div>

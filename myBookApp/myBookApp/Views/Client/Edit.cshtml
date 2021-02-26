@@ -1,0 +1,45 @@
+﻿@model myBookApp.Models.Client
+
+<form asp-controller="Client" method="post">
+    <div class="form-row text-center">
+        <div class="form-group">
+            <label class="te">Last Name</label>
+            <div class="col">
+                <input class="form-control" type="text" name="LastName" placeholder="Last name" value="@Model.LastName"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <div class="col">
+                <input class="form-control" type="text" name="FirstName" placeholder="First name" value="@Model.FirstName" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <div class="col">
+                <input class="form-control" type="text" name="City" placeholder="City" value="@Model.City" />
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label>Adress</label>
+            <div class="col">
+                <input class="form-control" type="text" name="Adress" placeholder="Adress" value="@Model.Adress"/>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label>Mobile</label>
+            <div class="col">
+                <input class="form-control" type="tel" name="Mobile" placeholder="Mobile number" value="@Model.Mobile"/>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <button class="btn btn-primary" type="submit" name="Save">Save</button>
+</form>

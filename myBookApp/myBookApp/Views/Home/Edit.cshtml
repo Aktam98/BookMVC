@@ -1,0 +1,35 @@
+﻿@model myBookApp.Models.Book
+
+
+
+<form asp-controller="Home" method="post">
+   
+    <div class="form-row text-center">
+
+        <div class="form-group">
+            <label class="te">Name</label>
+            <div class="col">
+                <input class="form-control" type="text" name="Name" placeholder="Book Name" value="@Model.Name" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Author</label>
+            <div class="col">
+                <input class="form-control" type="text" name="Author" placeholder="Author Book" value="@Model.Author" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <div class="col">
+                <input class="form-control" id="number" type="number" name="Price" value="@Model.Price" />
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <button class="btn btn-primary" type="submit" name="Save">Save</button>
+</form>

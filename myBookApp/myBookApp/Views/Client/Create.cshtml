@@ -1,0 +1,64 @@
+﻿@model myBookApp.Models.Book
+
+
+<h1>@Model.Name</h1>
+<form asp-controller="Client" method="post">
+    <div class="form-row text-center">
+        <div class="form-group">
+            <label class="te">Last Name</label>
+            <div class="col">
+                <input class="form-control" type="text" name="LastName" placeholder="Last name" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>First Name</label>
+            <div class="col">
+                <input class="form-control" type="text" name="FirstName" placeholder="First name" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">City</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="City">
+                <option>Samarqand</option>
+                <option>Toshkent</option>
+                <option>Jizzax</option>
+                <option>Sirdaryo</option>
+                <option>Qahqadaryo</option>
+                <option>Surxondaryo</option>
+                <option>Navoi</option>
+                <option>Buxoro</option>
+                <option>Xorazm</option>
+                <option>Qoraqolpog'iston</option>
+                <option>Andijon</option>
+                <option>Namangan</option>
+                <option>Farg'ona</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Adress</label>
+            <div class="col">
+                <input class="form-control" type="text" name="Adress" placeholder="Adress" />
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label>Adress</label>
+            <div class="col">
+                <input class="form-control" type="tel" name="Mobile" placeholder="Mobile number" />
+            </div>
+
+        </div>
+        @*<div class="form-group">
+            <label>BookId</label>
+            <div class="col">
+                <input class="form-control" name="Books" placeholder="Book" asp-all-route-data="@Model."/>
+            </div>
+
+        </div>*@
+
+
+    </div>
+
+
+    <button class="btn btn-primary" type="submit" asp-route-id="@Model.Id" name="Save">Save</button>
+</form>

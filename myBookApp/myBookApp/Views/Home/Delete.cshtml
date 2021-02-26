@@ -1,0 +1,21 @@
+﻿@model myBookApp.Models.Book
+
+<form asp-controller="Home" method="post">
+    <div align="center">
+        Name:  <b>@Model.Name</b>
+    </div >
+    <div align="center">
+        Author:<b>@Model.Author</b>
+    </div>
+    <div align="center">
+        Price: <b>@Model.Price</b>
+    </div>
+
+    <div align="center">
+        <button class="btn btn-danger" type="submit" name="Delete">Delete</button>
+        <a class="btn btn-outline-primary" asp-action="Index">Cancel</a>
+    </div>
+    
+
+</form>
+
